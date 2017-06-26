@@ -41,7 +41,8 @@ switch (argument1)
         break;  
     case 200:        
         obj_e.spr_p_index = spr_p200;
-        break;  
+        break;
+        
     case -50:
         obj_e.spr_p_index = spr_penalty50;
         break;
@@ -57,6 +58,51 @@ switch (argument1)
     case -5000:
        obj_e.spr_p_index = spr_penalty5000;
        break;
+   
+       
+    case -1:
+        obj_e.spr_p_index = spr_penalty1;
+        break;
+    case -2:
+        obj_e.spr_p_index = spr_penalty2;
+        break;
+    case -4:
+       obj_e.spr_p_index = spr_penalty4;
+       break;
+    case -8:
+        obj_e.spr_p_index = spr_penalty8;
+        break;
+    case -16:
+       obj_e.spr_p_index = spr_penalty16;
+       break;
+       
+    case -32:
+        obj_e.spr_p_index = spr_penalty32;
+        break;
+        
+        
+    case -64:
+        obj_e.spr_p_index = spr_penalty64;
+        break;
+    case -128:
+       obj_e.spr_p_index = spr_penalty128;
+       break;
+        
+    case -256:
+      obj_e.spr_p_index = spr_penalty256;
+      break;
+        
+    case -512:
+      obj_e.spr_p_index = spr_penalty512;
+      break;
+      
+    case -1024:
+        obj_e.spr_p_index = spr_penalty1024;
+        break;
+        
+    case -2048:
+        obj_e.spr_p_index = spr_penalty2048;
+        break;
 }
 
 return obj_e;

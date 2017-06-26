@@ -33,18 +33,69 @@ else
     }
     else
     {
+    /**
+        var reactor_penalty_multiplier = -1;
+        if Reactor_Key == "BCP" then reactor_penalty_multiplier = -5;
+        else if Reactor_Key == "GVR" then reactor_penalty_multiplier = -10;
+        
+        var penalty = 10;
+        if global.consecutive_penalty > 1 then penalty = 50;        
+        else if global.consecutive_penalty == 1 then penalty = 100;   
+        
+        penalty *= reactor_penalty_multiplier;
+                
+        
         if global.consecutive_penalty > 1
         {
-            arr_ele[0] = scr_create_electron(spr_ebad3, -5000, argument1, argument2);
+            arr_ele[0] = scr_create_electron(spr_ebad3, penalty, argument1, argument2);
         } 
         else if global.consecutive_penalty == 1
         {
-            arr_ele[0] = scr_create_electron(spr_ebad2, -1000, argument1, argument2);
+            arr_ele[0] = scr_create_electron(spr_ebad2, penalty, argument1, argument2);
         }
         else
         {
-            arr_ele[0] = scr_create_electron(spr_ebad1, -200, argument1, argument2);
+            arr_ele[0] = scr_create_electron(spr_ebad1, penalty, argument1, argument2);
         }
+        **/
+        
+        
+        var penalty = 0;
+        if global.consecutive_penalty > 3 then global.consecutive_penalty = 3;
+        
+        if global.consecutive_penalty == 3
+        {
+            if Reactor_Key == "BCP" then penalty = -128;
+            else if Reactor_Key == "GVR" then penalty = -2048;
+            else penalty = -8;
+            
+            arr_ele[0] = scr_create_electron(spr_ebad4, penalty, argument1, argument2);
+        } 
+        else if global.consecutive_penalty == 2
+        {
+            if Reactor_Key == "BCP" then penalty = -64;
+            else if Reactor_Key == "GVR" then penalty = -1024;
+            else penalty = -4;
+            
+            arr_ele[0] = scr_create_electron(spr_ebad3, penalty, argument1, argument2);
+        }
+        else if global.consecutive_penalty == 1
+        {
+            if Reactor_Key == "BCP" then penalty = -32;
+            else if Reactor_Key == "GVR" then penalty = -512;
+            else penalty = -2;
+            
+            arr_ele[0] = scr_create_electron(spr_ebad2, penalty, argument1, argument2);
+        }
+        else
+        {
+            if Reactor_Key == "BCP" then penalty = -16;
+            else if Reactor_Key == "GVR" then penalty = -256;
+            else penalty = -1;
+            
+            arr_ele[0] = scr_create_electron(spr_ebad1, penalty, argument1, argument2);
+        }
+        
     }
 }
 
