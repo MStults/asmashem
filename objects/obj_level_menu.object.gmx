@@ -68,7 +68,7 @@ back_w = sprite_get_width(spr_back_w);
 back_h = sprite_get_height(spr_back_w);
 
 menu_y = back_y;
-menu_x = back_x + spr_back_w - 22;
+menu_x = back_x + back_w + 20;
 menu_w = sprite_get_width(spr_menu_w);
 menu_h = sprite_get_height(spr_menu_w);
 

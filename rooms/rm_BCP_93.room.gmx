@@ -24,7 +24,7 @@ winning_score = 35000;
 //////////////////////;
 global.level_help[0] = "Destroy 3 or more atoms";
 global.level_help[1] = "by triggering one";
-global.level_help[2] = "ANTIMATTERGEN isotope!";
+global.level_help[2] = "ANTIMATTERGEN!";
 ///////////////////////////////////;
 global.level_help_spr[0] = spr_atom_anti;
 global.level_help_spr[1] = 148;

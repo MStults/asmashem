@@ -7,6 +7,6 @@ var arg4 = argument4;
 var arg5 = argument5;
 
 if scr_test_helper_penalty(arg1) then return false;
-var cc = arg0 - 1;
+var cc = arg0;
 return (global.laser_max_cc >= cc);
 

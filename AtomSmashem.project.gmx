@@ -1000,10 +1000,10 @@
       <room>rooms\rm_GVR_46</room>
       <room>rooms\rm_GVR_47</room>
       <room>rooms\rm_GVR_48</room>
-      <room>rooms\rm_GVR_49</room>
       <room>rooms\rm_GVR_50</room>
       <room>rooms\rm_GVR_51</room>
       <room>rooms\rm_GVR_52</room>
+      <room>rooms\rm_GVR_49</room>
       <room>rooms\rm_GVR_53</room>
       <room>rooms\rm_GVR_54</room>
       <room>rooms\rm_GVR_55</room>
@@ -1065,8 +1065,8 @@
       <room>rooms\rm_GVR_111</room>
     </rooms>
     <room>rooms\rm_end</room>
-    <room>rooms\rm_test</room>
     <room>rooms\rm_test_ad_fb</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <constants number="9">
     <constant name="CREDIT_SPEED">2.5</constant>

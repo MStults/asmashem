@@ -53,7 +53,7 @@ scr_reactor_set_last_visited(Reactor_Key);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_level_menu" x="16" y="48" name="inst_2FC95BA3" locked="0" code="globalvar Reactor_Key;&#xA;Reactor_Key = &quot;GVR&quot;;&#xA;start_room = global.gvr_start_rm;&#xA;end_room = global.gvr_end_rm;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_menu" x="16" y="48" name="inst_2FC95BA3" locked="0" code="globalvar Reactor_Key;&#xA;Reactor_Key = &quot;GVR&quot;;&#xA;start_room = global.gvr_start_rm;&#xA;end_room = global.gvr_end_rm;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_init" x="400" y="48" name="inst_1B604BF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

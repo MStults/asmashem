@@ -21,7 +21,7 @@ with(obj_next) scr_set_next_type();
 global.iron_most_cnt = 0;
 winning_score = 35000;
 //////////////////////;
-global.level_help[0] = "Destroy 6 or more ";
+global.level_help[0] = "Destroy 4 or more ";
 global.level_help[1] = "atoms with one shot from";
 global.level_help[2] = "the Lasergen isotope!";
 ///////////////////////////////////;
@@ -29,7 +29,7 @@ global.level_help_spr[0] = spr_atom_laser;
 global.level_help_spr[1] = 148;
 global.level_help_spr[2] = 130;
 ///////////////////////////////;
-global.challenge_argument0 = 6;
+global.challenge_argument0 = 4;
 global.challenge_test = scr_test_vc_laser;
 ///////////////////////////////////;
 global.challenge_bonus = 250;</code>
