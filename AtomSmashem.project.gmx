@@ -157,6 +157,7 @@
       <sprite>sprites\spr_egood1</sprite>
       <sprite>sprites\spr_ebad2</sprite>
       <sprite>sprites\spr_ebad3</sprite>
+      <sprite>sprites\spr_ebad4</sprite>
     </sprites>
     <sprites name="points">
       <sprite>sprites\spr_penalty50</sprite>
@@ -174,6 +175,18 @@
       <sprite>sprites\spr_x1_5</sprite>
       <sprite>sprites\spr_x2</sprite>
       <sprite>sprites\spr_x3</sprite>
+      <sprite>sprites\spr_penalty1</sprite>
+      <sprite>sprites\spr_penalty2</sprite>
+      <sprite>sprites\spr_penalty4</sprite>
+      <sprite>sprites\spr_penalty8</sprite>
+      <sprite>sprites\spr_penalty16</sprite>
+      <sprite>sprites\spr_penalty32</sprite>
+      <sprite>sprites\spr_penalty64</sprite>
+      <sprite>sprites\spr_penalty128</sprite>
+      <sprite>sprites\spr_penalty256</sprite>
+      <sprite>sprites\spr_penalty512</sprite>
+      <sprite>sprites\spr_penalty1024</sprite>
+      <sprite>sprites\spr_penalty2048</sprite>
     </sprites>
     <sprite>sprites\spr_sel</sprite>
     <sprites name="tut">
@@ -377,7 +390,7 @@
       <script>scripts\scr_doppel.gml</script>
       <script>scripts\scr_set_levl.gml</script>
       <script>scripts\scr_create_remnant.gml</script>
-      <script>scripts\scr_giveup_bad.gml</script>
+      <script>scripts\scr_giveup_bad_XXX.gml</script>
       <script>scripts\scr_upd_atom_death_cnt.gml</script>
     </scripts>
     <script>scripts\scr_same.gml</script>
