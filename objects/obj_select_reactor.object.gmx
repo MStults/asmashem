@@ -104,6 +104,30 @@ path_reverse(path_right);
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>path_delete(path_right);
+path_delete(path_left);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -177,13 +201,15 @@ reactors[2] = new_reactor;
             <kind>1</kind>
             <string>///SHIFT REACTORS TO THE RIGHT
 
-//check if already moving 
+/****
 var moving = false;
 for(var i=0; i&lt;3; i++) 
     with(reactors[i])
         if speed != 0 or path_speed != 0 
-            then moving = true;
-            
+            then moving = true;//check if already moving 
+****/
+
+var moving = scr_check_UI_is_moving(reactors, 3);            
 if moving then exit;
 
 for(var i=0; i&lt;3; i++)

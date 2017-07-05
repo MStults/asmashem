@@ -42,9 +42,19 @@
             <string>
 current_index = 0;
 
+/////TESTING
+scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
+scr_badge_add(BADGES.CHAIN_LASER_2);
+scr_badge_add(BADGES.CHAIN_LIGHTNING_3);
+scr_badge_add(BADGES.CERTIFIED);
+/////TESTING
+
 len = array_length_1d(global.badges_earned);
 screens = 0;
 var xx = 0;
+
+
+
 for(var i=0; i&lt;len; i++)
 {
     xx = i * room_width;
@@ -54,8 +64,20 @@ for(var i=0; i&lt;len; i++)
         var b = global.badges_earned[i];
         badge_icon = scr_badge_get_icon(b);
         text_arr = scr_badge_get_text(b);     
+        draw_gui = true;
+        badge_y += 145;
+        text_y += 145;
+        depth = other.depth - 1;
+        draw_earned_msg = false;
     }
 }
+
+test_y = 155 + 145;
+cx = (room_width / 2) | 0;
+swipe_x0 = 0;
+swipe_y0 = 0;
+swipe_step = 0;
+swipe_ms_dwn = false;
 
 btn_w = sprite_get_width(spr_next_w_lg);
 btn_h = sprite_get_height(spr_next_w_lg);
@@ -64,7 +86,7 @@ btn_h = sprite_get_height(spr_next_w_lg);
 //share button
 share_index = 0;
 share_x = ((room_width / 2) | 0) - (btn_w / 2 | 0);
-share_y = 550;
+share_y = 600;
 
 //back button
 back_index = 0;
@@ -73,7 +95,7 @@ back_y = share_y;
 
 //next button
 next_index = 0;
-next_x = share_x + btn_w + 15;
+next_x = share_x + btn_w + 16;
 next_y = share_y;
 
 close_width = sprite_get_width(spr_close);
@@ -93,7 +115,42 @@ path_set_kind(path_next, 1); //smooth
 path_set_precision(path_next, 4);
 path_set_closed(path_next, false); //make sure it is an open path
 
+path_prev = path_duplicate(path_next);
+path_reverse(path_prev);
+
 is_dialog = false;
+
+cx = (room_width / 2) | 0;
+cy = (room_height / 2) | 0;
+flare_scale = 3;
+flare_grow = true;
+
+text_color = make_color_rgb(211, 255, 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -131,6 +188,15 @@ is_dialog = false;
           <argument>
             <kind>1</kind>
             <string>path_delete(path_next);
+path_delete(path_prev);
+
+for(var i=0; i&lt;len; i++)
+{
+    with(screens[i])
+    {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -179,8 +245,16 @@ scr_play_snd(Sound.Click);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///BACK
+            <string>///SHIFT badges TO THE LEFT
 scr_play_snd(Sound.Click);
+
+for(var i=0; i&lt;len; i++)
+{
+    with(screens[i])
+    {
+        path_start(other.path_prev, other.mov_speed, path_action_stop, false);
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -229,25 +303,22 @@ scr_play_snd(Sound.Click);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Next
+            <string>///SHIFT badges TO THE RIGHT
+
+if scr_check_UI_is_moving(screens, len) then exit;
+
 scr_play_snd(Sound.Click);
 
-if current_index &gt;= len - 1
-{
-    room_goto(room_next(room));
-} 
-else 
-{
+
     
-    for(var i=0; i&lt;len; i++)
+for(var i=0; i&lt;len; i++)
+{
+    with(screens[i])
     {
-        with(screens[i])
-        {
-            path_start(other.path_next, other.mov_speed, path_action_stop, false);
-        }
+        path_start(other.path_next, other.mov_speed, path_action_stop, false);
     }
-    current_index++;    
 }
+
 
 
  
@@ -273,7 +344,15 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if flare_grow
+then flare_scale += .05;
+else flare_scale -= .05;
+
+if flare_scale &gt; 5 then flare_grow = false;
+if flare_scale &lt; 3 then flare_grow = true;
+
+
+if scr_check_UI_is_moving(screens, len) then exit;
 
 var close_test = scr_btn_click(close_x, close_y, close_x + close_width, close_y + close_height);
 if close_test &lt; 3 then close_index = close_test else alarm[3] = 1;
@@ -288,14 +367,61 @@ next_index = 0;
 var next_test = scr_btn_click(next_x, next_y, next_x + btn_w, next_y + btn_h);
 if next_test &lt; 3 then next_index = next_test else alarm[0] = 1;    
 
+share_index = 0;
+var share_test = 0;
 if can_share
-{
-    share_index = 0;
-    var share_test = scr_btn_click(share_x, share_y, share_x + btn_w, share_y + btn_h);
+{   
+    share_test = scr_btn_click(share_x, share_y, share_x + btn_w, share_y + btn_h);
     if share_test &lt; 3 then share_index = share_test else alarm[1] = 1;   
 } else {
     share_index = 4;
 }
+
+
+if (close_test + back_test + next_test + share_test) &gt; 0 then exit;
+
+if device_mouse_check_button_pressed(0, mb_any) 
+{ 
+    swipe_x0 = device_mouse_x(0);
+    swipe_y0 = device_mouse_y(0);   
+        
+    var left = 0;
+    var top = test_y - 225;
+    var right = room_width;
+    var bottom = test_y + 225; 
+    
+    if  point_in_rectangle(swipe_x0, swipe_y0, left, top, right, bottom) 
+    {            
+       
+        swipe_step = 0;
+        swipe_ms_dwn = true;
+    }
+}
+
+if swipe_ms_dwn then swipe_step++;
+if swipe_step &gt; 999 then swipe_step = 999;
+
+if swipe_ms_dwn &amp;&amp; device_mouse_check_button_released(0, mb_any) 
+{
+  
+    swipe_ms_dwn = false;
+    var x1 = device_mouse_x(0);
+    var y1 = device_mouse_y(0);
+    if point_distance(swipe_x0, swipe_y0, x1, y1) &gt; 15
+    {
+        var dir = x1 - swipe_x0;
+        if dir &lt; 0 
+        {
+            alarm[0] = 1; //next
+        } else {
+            alarm[2] = 1; // back
+        }
+    } else {
+        if can_share then alarm[1] = 1; //share 
+    }
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -320,7 +446,21 @@ if can_share
             <kind>1</kind>
             <string>///DRAW BADGE SCREEN
 
-scr_draw_dialog_rec_ext(.7);
+scr_draw_dialog_rec_ext(.9);
+
+draw_sprite_ext(spr_flare_lg, 0, cx, cx, 5, 5, 0, image_blend, image_alpha); 
+
+draw_sprite_ext(spr_flare_lg, 0, cx, cx, flare_scale, flare_scale, 0, image_blend, image_alpha); 
+
+
+draw_set_font(fnt_game_42);
+draw_set_colour(text_color);
+draw_set_halign(fa_center);
+
+ draw_text(cx, 80, "Achievements"); 
+//
+
+draw_set_halign(fa_left);
 
 draw_sprite(spr_close, close_index, close_x, close_y);
 draw_sprite(spr_back_w_lg, back_index, back_x, back_y);

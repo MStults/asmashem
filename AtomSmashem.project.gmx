@@ -534,6 +534,7 @@
       <script>scripts\scr_badge_get_text.gml</script>
     </scripts>
     <script>scripts\scr_can_share.gml</script>
+    <script>scripts\scr_check_UI_is_moving.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>

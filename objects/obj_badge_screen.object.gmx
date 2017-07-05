@@ -32,10 +32,12 @@ badge_y = 155
 text_y = 300;
 
 line_height = 50;
-
 badge_icon = noone;
 text_arr = 0;
 
+draw_gui = false;
+draw_earned_msg = true;
+destroy = false;
 
 
 </string>
@@ -62,7 +64,104 @@ text_arr = 0;
             <kind>1</kind>
             <string>//
 
-draw_cx = x + cx
+draw_cx = x + cx;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///DRAW BADGE SCREEN
+///DRAW BADGE SCREEN
+
+draw_set_font(fnt_game_36);
+draw_set_colour(c_white);
+draw_set_halign(fa_center);
+
+draw_sprite(badge_icon, 0, draw_cx, badge_y);
+
+var l = array_length_1d(text_arr), yy = text_y, xx = draw_cx - 10;
+
+if draw_earned_msg 
+{
+    draw_text(xx, yy, "You Earned");  
+    yy += line_height;
+}
+
+for(var i=0; i&lt;l; i++)
+{
+    draw_text(xx, yy, text_arr[i]);  
+    yy += line_height;
+}
+
+draw_set_halign(fa_left);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///CHECK IF IT NEEDS DESTROYED 
+path_speed = 0;
+if destroy then instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if  draw_gui then event_user(0); 
+
 
 </string>
           </argument>
@@ -87,25 +186,7 @@ draw_cx = x + cx
           <argument>
             <kind>1</kind>
             <string>///DRAW BADGE SCREEN
-
-draw_set_font(fnt_game_36);
-draw_set_colour(c_white);
-draw_set_halign(fa_center);
-
-draw_sprite(badge_icon, 0, draw_cx, badge_y);
-
-var l = array_length_1d(text_arr), yy = text_y;
-
-draw_text(draw_cx, yy, "You Earned");  
-yy += line_height;
-
-for(var i=0; i&lt;l; i++)
-{
-    draw_text(draw_cx, yy, text_arr[i]);  
-    yy += line_height;
-}
-
-draw_set_halign(fa_left);
+if not draw_gui then event_user(0); 
 </string>
           </argument>
         </arguments>
