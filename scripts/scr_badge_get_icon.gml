@@ -12,5 +12,6 @@ switch(badge)
     case BADGES.CHAIN_SHOTGUN_2: return spr_badge_shotgun_chain;
     case BADGES.CHAIN_SHOTGUN_3: return spr_badge_shotgun_chain;
     case BADGES.CERTIFIED: return spr_badge_certified;
+    case BADGES.UNKNOWN: return spr_badge_qm;
 }
 

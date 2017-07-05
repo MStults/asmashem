@@ -43,6 +43,12 @@ switch(badge)
         text[0] = "Atom Smashem";
         text[1] = "Certification";
         break;
+        
+    case BADGES.UNKNOWN: 
+        text[0] = "";
+        text[1] = "";
+        break;
+        
 }
 
 return text;

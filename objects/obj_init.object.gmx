@@ -1065,6 +1065,8 @@ enum BADGES
     , STAR_STREAK_1
     , STAR_STREAK_2
     , STAR_STREAK_3
+    , UNKNOWN
+
 }
 </string>
           </argument>

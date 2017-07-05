@@ -47,6 +47,7 @@ scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
 scr_badge_add(BADGES.CHAIN_LASER_2);
 scr_badge_add(BADGES.CHAIN_LIGHTNING_3);
 scr_badge_add(BADGES.CERTIFIED);
+scr_badge_add(BADGES.UNKNOWN);
 /////TESTING
 
 len = array_length_1d(global.badges_earned);
@@ -120,10 +121,15 @@ path_reverse(path_prev);
 
 is_dialog = false;
 
-cx = (room_width / 2) | 0;
-cy = (room_height / 2) | 0;
+
+flare_x = (room_width / 2) | 0;
+flare_y = ((room_height / 2) | 0 ) - 90;
 flare_scale = 3;
+flare_max = 6;
+flare_min = 3;
+flare_rotate = 0;
 flare_grow = true;
+flare_angle = 0;
 
 text_color = make_color_rgb(211, 255, 0);
 
@@ -348,8 +354,10 @@ for(var i=0; i&lt;len; i++)
 then flare_scale += .05;
 else flare_scale -= .05;
 
-if flare_scale &gt; 5 then flare_grow = false;
-if flare_scale &lt; 3 then flare_grow = true;
+if flare_scale &gt; flare_max then flare_grow = false;
+if flare_scale &lt; flare_min then flare_grow = true;
+
+flare_angle = (flare_angle + 2) % 360;    
 
 
 if scr_check_UI_is_moving(screens, len) then exit;
@@ -448,9 +456,9 @@ if swipe_ms_dwn &amp;&amp; device_mouse_check_button_released(0, mb_any)
 
 scr_draw_dialog_rec_ext(.9);
 
-draw_sprite_ext(spr_flare_lg, 0, cx, cx, 5, 5, 0, image_blend, image_alpha); 
+draw_sprite_ext(spr_flare_lg, 0, flare_x, flare_y, flare_max, flare_max, 0, image_blend, image_alpha); 
 
-draw_sprite_ext(spr_flare_lg, 0, cx, cx, flare_scale, flare_scale, 0, image_blend, image_alpha); 
+draw_sprite_ext(spr_flare_lg, 0, flare_x, flare_y, flare_scale, flare_scale, flare_angle, image_blend, image_alpha); 
 
 
 draw_set_font(fnt_game_42);
