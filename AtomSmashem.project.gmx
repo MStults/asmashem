@@ -120,12 +120,28 @@
     </sprites>
     <sprites name="badge">
       <sprite>sprites\spr_fb_1</sprite>
-      <sprite>sprites\spr_badge_shotgun_chain</sprite>
-      <sprite>sprites\spr_badge_laser_chain</sprite>
       <sprite>sprites\spr_badge_lightning_chain</sprite>
-      <sprite>sprites\spr_badge_streak</sprite>
+      <sprite>sprites\spr_badge_laser_chain</sprite>
+      <sprite>sprites\spr_badge_shotgun_chain</sprite>
       <sprite>sprites\spr_badge_certified</sprite>
+      <sprite>sprites\spr_badge_streak</sprite>
+      <sprite>sprites\spr_badge_streak2</sprite>
+      <sprite>sprites\spr_badge_streak3</sprite>
       <sprite>sprites\spr_badge_qm</sprite>
+      <sprite>sprites\spr_badge_missle</sprite>
+      <sprite>sprites\spr_badge_missle1</sprite>
+      <sprite>sprites\spr_badge_mine</sprite>
+      <sprite>sprites\spr_badge_dop</sprite>
+      <sprite>sprites\spr_badge_anti</sprite>
+      <sprite>sprites\spr_badge_finished</sprite>
+      <sprite>sprites\spr_badge_iron</sprite>
+      <sprite>sprites\spr_badge_shot1</sprite>
+      <sprite>sprites\spr_badge_shot2</sprite>
+      <sprite>sprites\spr_badge_2</sprite>
+      <sprite>sprites\spr_badge_3</sprite>
+      <sprite>sprites\spr_badge_4</sprite>
+      <sprite>sprites\spr_badge_5</sprite>
+      <sprite>sprites\spr_badge_6</sprite>
     </sprites>
     <sprite>sprites\spr_controller</sprite>
     <sprite>sprites\spr_floor</sprite>
