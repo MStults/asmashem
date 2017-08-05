@@ -1047,19 +1047,22 @@ challenge_argument5 = 0;
           <argument>
             <kind>1</kind>
             <string>///BADGES GLOBALS
+globalvar badges_newly_earned;
+global.badges_newly_earned = 0;
+
 globalvar badges_earned;
 global.badges_earned = 0;
 
 enum BADGES
 {
-    CHAIN_LIGHTNING_1
+      UNKNOWN
+    , CHAIN_LIGHTNING_1
     , CHAIN_LASER_1
     , CHAIN_SHOTGUN_1
     , CERTIFIED //tut completion 
     , STAR_STREAK_1
     , STAR_STREAK_2
-    , STAR_STREAK_3    
-    , UNKNOWN
+    , STAR_STREAK_3     
     , MISSLE1
     , MISSLE2
     , MINE
@@ -1069,6 +1072,7 @@ enum BADGES
     , IRON
     , SHOT1
     , SHOT2
+    , ATOM1
     , ATOM2
     , ATOM3
     , ATOM4

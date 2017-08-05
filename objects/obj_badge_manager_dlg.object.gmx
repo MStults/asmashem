@@ -42,19 +42,11 @@
             <string>
 current_index = 0;
 
-/////TESTING
-scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
-scr_badge_add(BADGES.CHAIN_LASER_2);
-scr_badge_add(BADGES.CHAIN_LIGHTNING_3);
-scr_badge_add(BADGES.CERTIFIED);
-scr_badge_add(BADGES.UNKNOWN);
-/////TESTING
-
-len = array_length_1d(global.badges_earned);
+//var badgeArray = scr_get_all_badges();
+var badgeArray = scr_get_earned_badges();
+len = array_length_1d(badgeArray);
 screens = 0;
 var xx = 0;
-
-
 
 for(var i=0; i&lt;len; i++)
 {
@@ -62,9 +54,12 @@ for(var i=0; i&lt;len; i++)
     screens[i] = instance_create(xx, 0, obj_badge_screen);
     with(screens[i])
     {
-        var b = global.badges_earned[i];
-        badge_icon = scr_badge_get_icon(b);
-        text_arr = scr_badge_get_text(b);     
+        //var b = global.badges_earned[i];
+        //badge_icon = scr_badge_get_icon(b);
+        //text_arr = scr_badge_get_text(b);     
+        
+        badge_icon = scr_badge_get_icon(badgeArray[i]);
+        text_arr = scr_badge_get_text(badgeArray[i]);     
         draw_gui = true;
         badge_y += 145;
         text_y += 145;
@@ -252,7 +247,16 @@ scr_play_snd(Sound.Click);
           <argument>
             <kind>1</kind>
             <string>///SHIFT badges TO THE LEFT
+if current_index &lt;= 0
+{
+    current_index = 0;
+    exit;
+}
+
+//if scr_check_UI_is_moving(screens, len) then exit;
+
 scr_play_snd(Sound.Click);
+current_index--;
 
 for(var i=0; i&lt;len; i++)
 {
@@ -311,11 +315,16 @@ scr_play_snd(Sound.Click);
             <kind>1</kind>
             <string>///SHIFT badges TO THE RIGHT
 
-if scr_check_UI_is_moving(screens, len) then exit;
+if current_index &gt;= (len - 1)
+{
+    current_index = len - 1;
+    exit;
+}
+
+//if scr_check_UI_is_moving(screens, len) then exit;
 
 scr_play_snd(Sound.Click);
-
-
+current_index++;
     
 for(var i=0; i&lt;len; i++)
 {
@@ -359,21 +368,32 @@ if flare_scale &lt; flare_min then flare_grow = true;
 
 flare_angle = (flare_angle + 2) % 360;    
 
-
 if scr_check_UI_is_moving(screens, len) then exit;
 
 var close_test = scr_btn_click(close_x, close_y, close_x + close_width, close_y + close_height);
 if close_test &lt; 3 then close_index = close_test else alarm[3] = 1;
 
+var back_test = 0;
+if current_index &gt; 0
+{
+    back_index = 0;
+    back_test = scr_btn_click(back_x, back_y, back_x + btn_w, back_y + btn_h);
+    if back_test &lt; 3 then back_index = back_test else alarm[2] = 1;    
+} else {
+    //current_index = 0;
+    back_index = 3;
+}
 
-back_index = 0;
-var back_test = scr_btn_click(back_x, back_y, back_x + btn_w, back_y + btn_h);
-if back_test &lt; 3 then back_index = back_test else alarm[2] = 1;    
-
-
-next_index = 0;
-var next_test = scr_btn_click(next_x, next_y, next_x + btn_w, next_y + btn_h);
-if next_test &lt; 3 then next_index = next_test else alarm[0] = 1;    
+var next_test = 0;
+if current_index &lt; (len - 1)
+{
+    next_index = 0;
+    next_test = scr_btn_click(next_x, next_y, next_x + btn_w, next_y + btn_h);
+    if next_test &lt; 3 then next_index = next_test else alarm[0] = 1;    
+} else {
+    //current_index = len - 1;
+    next_index = 3;
+}
 
 share_index = 0;
 var share_test = 0;

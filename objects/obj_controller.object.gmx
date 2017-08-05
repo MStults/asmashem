@@ -245,10 +245,10 @@ special_atom_queue_size = -1;
             <string>///TEST BADGES
 
 /////TESTING
-scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
-scr_badge_add(BADGES.CHAIN_LASER_2);
-scr_badge_add(BADGES.CHAIN_LIGHTNING_3);
-scr_badge_add(BADGES.CERTIFIED);
+//scr_badge_add(BADGES.DOP);
+//scr_badge_add(BADGES.FINISH);
+//scr_badge_add(BADGES.IRON);
+//scr_badge_add(BADGES.MISSLE2);
 /////TESTING
 </string>
           </argument>

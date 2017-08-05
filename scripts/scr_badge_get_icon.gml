@@ -24,6 +24,7 @@ switch(badge)
     case BADGES.IRON: return spr_badge_iron;
     case BADGES.SHOT1: return spr_badge_shot1;
     case BADGES.SHOT2: return spr_badge_shot2;
+    case BADGES.ATOM1: return spr_badge_1;
     case BADGES.ATOM2: return spr_badge_2;
     case BADGES.ATOM3: return spr_badge_3;
     case BADGES.ATOM4: return spr_badge_4;

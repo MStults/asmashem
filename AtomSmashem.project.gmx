@@ -137,6 +137,7 @@
       <sprite>sprites\spr_badge_iron</sprite>
       <sprite>sprites\spr_badge_shot1</sprite>
       <sprite>sprites\spr_badge_shot2</sprite>
+      <sprite>sprites\spr_badge_1</sprite>
       <sprite>sprites\spr_badge_2</sprite>
       <sprite>sprites\spr_badge_3</sprite>
       <sprite>sprites\spr_badge_4</sprite>
@@ -549,6 +550,8 @@
       <script>scripts\scr_badge_add.gml</script>
       <script>scripts\scr_badge_get_icon.gml</script>
       <script>scripts\scr_badge_get_text.gml</script>
+      <script>scripts\scr_get_earned_badges.gml</script>
+      <script>scripts\scr_get_all_badges.gml</script>
     </scripts>
     <script>scripts\scr_can_share.gml</script>
     <script>scripts\scr_check_UI_is_moving.gml</script>
