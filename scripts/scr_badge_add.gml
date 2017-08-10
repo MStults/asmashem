@@ -2,10 +2,10 @@
 
 var badge = argument0;
 
-var len = array_length_1d(global.badges_newly_earned);
+var len = array_length_1d(global.badges_earned);
 for(var i=0; i<len; i++)
 {
-    if(global.badges_newly_earned[i] == badge)
+    if(global.badges_earned[i] == badge)
     {
         return 0;
     }    
@@ -18,7 +18,7 @@ ini_close();
 
 if found > 0 then return 0;
 
-global.badges_newly_earned[len] = badge;
+global.badges_earned[len] = badge;
 return len + 1;
 
 
