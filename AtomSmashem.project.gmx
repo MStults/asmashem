@@ -538,8 +538,8 @@
       <script>scripts\scr_tut3_doppel.gml</script>
     </scripts>
     <scripts name="FB">
-      <script>scripts\scr_fb_enabled.gml</script>
-      <script>scripts\scr_create_fb_badge.gml</script>
+      <script>scripts\scr_fb_post_badge.gml</script>
+      <script>scripts\scr_fb_post_scrore.gml</script>
     </scripts>
     <scripts name="ads">
       <script>scripts\scr_ad_show.gml</script>
@@ -558,6 +558,8 @@
     </scripts>
     <script>scripts\scr_can_share.gml</script>
     <script>scripts\scr_check_UI_is_moving.gml</script>
+    <script>scripts\scr_level_end_1.gml</script>
+    <script>scripts\scr_level_end_2.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>

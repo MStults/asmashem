@@ -23,17 +23,17 @@ switch(badge)
         break;
         
     case BADGES.STAR_STREAK_1: 
-        text[0] = "Winnig Steak 1";
+        text[0] = "Winnig Streak 1";
         text[1] = "Stickler";
         break;
         
     case BADGES.STAR_STREAK_2: 
-        text[0] = "Winnig Steak 2";
+        text[0] = "Winnig Streak 2";
         text[1] = "Perfectionist";
         break;
         
     case BADGES.STAR_STREAK_3: 
-        text[0] = "Winnig Steak 3";
+        text[0] = "Winnig Streak 3";
         text[1] = "Domination";
         break;
         

@@ -3268,6 +3268,8 @@ show_hint  = ini_read_real("OPT", "HINT", 1);
 show_board = ini_read_real("OPT", "BOARD", 1);
 ini_close(); 
 
+if scr_can_share() then facebook_init();
+
 alarm[0] = 1;
 
 

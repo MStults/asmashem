@@ -164,7 +164,7 @@ brag_y = room_height - 82 - 40;
 brag_w_h = (brag_w/2) | 0;
 brag_h_h = (brag_h/2) | 0;
 
-can_brag = scr_fb_enabled();
+can_brag = scr_can_share();
 btn_post_exists = false;
 /****************/
 
@@ -346,32 +346,6 @@ if(btn_post_exists)
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///POST SCORE TO FACEBOOK
-scr_play_snd(Sound.Click);
-//var total_stars = star1_val + star2_val + star1_val; 
-//AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="2" enumb="4">
       <action>
         <libid>1</libid>
@@ -393,6 +367,7 @@ scr_play_snd(Sound.Click);
 scr_play_snd(Sound.Click);
 var total_stars = star1_val + star2_val + star1_val; 
 //AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
+scr_fb_post_scrore(total, global.lvl_name, Reactor_Key, total_stars);
 </string>
           </argument>
         </arguments>
@@ -603,7 +578,7 @@ if can_share
 {
     share_index = 0;
     var share_test = scr_btn_click(share_x, share_y, share_x + btn_w, share_y + btn_h);
-    if share_test &lt; 3 then share_index = share_test else alarm[5] = 1;
+    if share_test &lt; 3 then share_index = share_test else alarm[4] = 1;
 }
 
 menu_index = 0;
