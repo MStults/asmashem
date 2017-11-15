@@ -8,8 +8,6 @@
   <license>Free to use, also for commercial games.</license>
   <description></description>
   <helpfile></helpfile>
-  <androidProps>-1</androidProps>
-  <iosProps>-1</iosProps>
   <installdir></installdir>
   <classname>Mobile</classname>
   <androidclassname>Mobile</androidclassname>
@@ -35,6 +33,23 @@
   <iosThirdPartyFrameworks>
     <Framework weak="0">GoogleMobileAds.framework</Framework>
   </iosThirdPartyFrameworks>
+  <ConfigOptions>
+    <Config name="Default">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="TutorialDesign">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="NoMatching">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="ShowState">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="Testing">
+      <CopyToMask>35651596</CopyToMask>
+    </Config>
+  </ConfigOptions>
   <androidPermissions>
     <Permission>android.permission.INTERNET</Permission>
     <Permission>android.permission.ACCESS_NETWORK_STATE</Permission>

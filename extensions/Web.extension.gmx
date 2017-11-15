@@ -8,8 +8,6 @@
   <license>Free to use, also for commercial games.</license>
   <description></description>
   <helpfile></helpfile>
-  <androidProps>0</androidProps>
-  <iosProps>0</iosProps>
   <installdir></installdir>
   <classname></classname>
   <androidclassname></androidclassname>
@@ -25,6 +23,23 @@
   <gradleinject></gradleinject>
   <iosSystemFrameworks/>
   <iosThirdPartyFrameworks/>
+  <ConfigOptions>
+    <Config name="Default">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="TutorialDesign">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="NoMatching">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="ShowState">
+      <CopyToMask>9223372036854775807</CopyToMask>
+    </Config>
+    <Config name="Testing">
+      <CopyToMask>817991712</CopyToMask>
+    </Config>
+  </ConfigOptions>
   <androidPermissions/>
   <IncludedResources/>
   <files>
