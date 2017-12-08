@@ -49,7 +49,7 @@
       <CopyToMask>9223372036854775807</CopyToMask>
     </Config>
     <Config name="Testing">
-      <CopyToMask>35651596</CopyToMask>
+      <CopyToMask>9223372036854775807</CopyToMask>
     </Config>
   </ConfigOptions>
   <androidPermissions/>

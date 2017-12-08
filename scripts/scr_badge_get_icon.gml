@@ -15,8 +15,8 @@ switch(badge)
       
     case BADGES.UNKNOWN: return spr_badge_qm;    
     
-    case BADGES.MISSLE1: return spr_badge_missle;
-    case BADGES.MISSLE2: return spr_badge_missle1;
+    case BADGES.MISSLE1: return spr_badge_missle1;
+    case BADGES.MISSLE2: return spr_badge_missle;
     case BADGES.MINE: return spr_badge_mine;
     case BADGES.DOP: return spr_badge_dop;
     case BADGES.ANTI: return spr_badge_anti;

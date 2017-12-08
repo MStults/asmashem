@@ -23,17 +23,17 @@ switch(badge)
         break;
         
     case BADGES.STAR_STREAK_1: 
-        text[0] = "Winnig Streak 1";
-        text[1] = "Stickler";
+        text[0] = "Winning Streak 1";
+        text[1] = "Mastery";
         break;
         
     case BADGES.STAR_STREAK_2: 
-        text[0] = "Winnig Streak 2";
+        text[0] = "Winning Streak 2";
         text[1] = "Perfectionist";
         break;
         
     case BADGES.STAR_STREAK_3: 
-        text[0] = "Winnig Streak 3";
+        text[0] = "Winning Streak 3";
         text[1] = "Domination";
         break;
         
@@ -43,12 +43,12 @@ switch(badge)
         break;
         
     case BADGES.MISSLE1: 
-        text[0] = "Missle";
+        text[0] = "Missile";
         text[1] = "Commander";
         break;
         
     case BADGES.MISSLE2: 
-        text[0] = "Missle Commander";
+        text[0] = "Missile Commander";
         text[1] = "in-chief";
         break;
         

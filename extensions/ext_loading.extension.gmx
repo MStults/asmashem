@@ -64,7 +64,7 @@
           <CopyToMask>17593242063086</CopyToMask>
         </Config>
         <Config name="Testing">
-          <CopyToMask>32</CopyToMask>
+          <CopyToMask>17593242063086</CopyToMask>
         </Config>
       </ConfigOptions>
       <ProxyFiles/>
