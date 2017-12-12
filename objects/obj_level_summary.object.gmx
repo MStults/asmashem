@@ -263,6 +263,14 @@ ini_close();
           <argument>
             <kind>1</kind>
             <string>///BADGES TESTS AND SETUP
+if TESTING
+{
+    scr_badge_add(BADGES.CHAIN_LIGHTNING_1);
+    scr_badge_add(BADGES.CHAIN_LASER_1);
+    scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
+    scr_badge_add(BADGES.STAR_STREAK_1);
+    scr_badge_add(BADGES.FINISH);
+}
 
 //TEST CHAIN
 scr_badge_record_and_test(BADGES.CHAIN_LIGHTNING_1, "CHAIN_LIGHTNING_1", global.lightning_max_cc, 100);

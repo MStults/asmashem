@@ -43,7 +43,7 @@
 current_index = 0;
 
 //var badgeArray = scr_get_all_badges();
-var badgeArray = scr_get_earned_badges();
+badgeArray = scr_get_earned_badges();
 len = array_length_1d(badgeArray);
 screens = 0;
 var xx = 0;
@@ -288,9 +288,12 @@ for(var i=0; i&lt;len; i++)
           <argument>
             <kind>1</kind>
             <string>///POST SCORE TO FACEBOOK
-scr_play_snd(Sound.Click);
-//var total_stars = star1_val + star2_val + star1_val; 
-//AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
+if current_index &lt; len
+{
+    scr_play_snd(Sound.Click);
+    scr_fb_post_badge(badgeArray[current_index]);
+}
+
 </string>
           </argument>
         </arguments>

@@ -33,13 +33,14 @@ screens = 0;
 var xx = 0;
 for(var i=0; i&lt;len; i++)
 {
+    badges[i] = 
     xx = i * room_width;
     screens[i] = instance_create(xx, 0, obj_badge_screen);
     with(screens[i])
     {
         var b = global.badges_earned[i];
         badge_icon = scr_badge_get_icon(b);
-        text_arr = scr_badge_get_text(b);   
+        text_arr = scr_badge_get_text(b); 
     }
 }
 
@@ -112,9 +113,12 @@ is_dialog = false;
           <argument>
             <kind>1</kind>
             <string>///POST SCORE TO FACEBOOK
-scr_play_snd(Sound.Click);
-//var total_stars = star1_val + star2_val + star1_val; 
-//AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
+
+if current_index &lt; len
+{
+    scr_play_snd(Sound.Click);
+    scr_fb_post_badge(global.badges_earned[current_index]);
+}
 </string>
           </argument>
         </arguments>

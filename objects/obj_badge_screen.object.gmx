@@ -38,8 +38,6 @@ text_arr = 0;
 draw_gui = false;
 draw_earned_msg = true;
 destroy = false;
-
-
 </string>
           </argument>
         </arguments>
