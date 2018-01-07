@@ -1,4 +1,4 @@
-
+/****
 if not scr_can_share() then exit;
 
 var the_score = argument0;
@@ -28,4 +28,4 @@ ds_map_add(map, "picture", "https://atomsmashem.com/resources/img/fbIcon-min.jpg
 
 facebook_dialog("feed", map, -1);
 ds_map_destroy(map);
-
+***/

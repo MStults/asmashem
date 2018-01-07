@@ -21,10 +21,10 @@
     <option_android_arch_mipsr2>false</option_android_arch_mipsr2>
     <option_android_arch_mipsr2sf>false</option_android_arch_mipsr2sf>
     <option_android_arch_x86>True</option_android_arch_x86>
-    <option_android_build_tools_version>23.0.1</option_android_build_tools_version>
+    <option_android_build_tools_version>26.0.1</option_android_build_tools_version>
     <option_android_build_version>5</option_android_build_version>
     <option_android_color_depth>1</option_android_color_depth>
-    <option_android_compile_sdk_version>24</option_android_compile_sdk_version>
+    <option_android_compile_sdk_version>26</option_android_compile_sdk_version>
     <option_android_display_name>Atom Smashem</option_android_display_name>
     <option_android_facebook_app_display_name>Atom Smashem</option_android_facebook_app_display_name>
     <option_android_facebook_appid>300837453632691</option_android_facebook_appid>
@@ -77,7 +77,7 @@
     <option_android_sleep_margin>4</option_android_sleep_margin>
     <option_android_splash_png>Configs\Default\android\splash.png</option_android_splash_png>
     <option_android_splash_time>1</option_android_splash_time>
-    <option_android_support_lib_version>24.2.1</option_android_support_lib_version>
+    <option_android_support_lib_version>26.1.0</option_android_support_lib_version>
     <option_android_target_sdk_version>24</option_android_target_sdk_version>
     <option_android_texture_page>1024</option_android_texture_page>
     <option_android_use_test_ads>0</option_android_use_test_ads>

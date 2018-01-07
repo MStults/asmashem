@@ -1,21 +1,22 @@
 package ${YYAndroidPackageName};
 
-import ${YYAndroidPackageName}.R;
-import ${YYAndroidPackageName}.RunnerActivity;
-import com.yoyogames.runner.RunnerJNILib;
+//import ${YYAndroidPackageName}.R;
+//import ${YYAndroidPackageName}.RunnerActivity;
+//import com.yoyogames.runner.RunnerJNILib;
 
 import android.util.Log;
 import android.widget.Toast;
-import android.content.Context;
-import android.os.Build;
+
 import android.content.ContentResolver;
 import android.provider.Settings;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
-import android.util.Log;
+import android.net.Uri;
+import com.facebook.share.model.ShareContent;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 public class Mobile {
 
@@ -178,6 +179,45 @@ public class Mobile {
 
     }
 
+	 public  void FBShare(String linkUrl)	{
+		Toast("Loading Facebook...");
+	    try {
+            if (ShareDialog.canShow(ShareLinkContent.class)) {
+                ShareLinkContent content = new ShareLinkContent.Builder()
+                        .setContentUrl(Uri.parse(linkUrl))
+                        .build();
+                ShareDialog.show(RunnerActivity.CurrentActivity, content);
+            } else {
+                Toast("Unable to share the Atomsmashem link on Facebook.");
+            }
+        } catch (Exception ex){
+            Toast("Sharing the Atomsmashem link cause an exception.");
+        }
+	}
+/***
+	public void FBShareScreen()	{
+		 Toast("HIT FBShareScreen");
+		SharePhoto photo = new SharePhoto.Builder()
+                        .setBitmap(takeScreenshot())
+                        .build();
+		SharePhotoContent content = new SharePhotoContent.Builder()
+				.addPhoto(photo)
+				.build();
 
+		ShareContent shareContent = new ShareMediaContent.Builder()
+				.addMedium(photo)
+				.build();
 
+		ShareDialog.show(RunnerActivity.CurrentActivity , content);
+	}
+
+	private Bitmap takeScreenshot() {
+            // create bitmap screen capture
+            View v1 = RunnerActivity.CurrentActivity.getWindow().getDecorView().getRootView();
+            v1.setDrawingCacheEnabled(true);
+            Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
+            v1.setDrawingCacheEnabled(false);
+           return bitmap;
+    }
+***/
 }

@@ -265,11 +265,19 @@ ini_close();
             <string>///BADGES TESTS AND SETUP
 if TESTING
 {
+    ini_open("atom_smashem.ini");
+    ini_key_delete('badges',string(BADGES.CHAIN_LIGHTNING_1));
+    ini_key_delete('badges',string(BADGES.CHAIN_LASER_1));
+    ini_key_delete('badges',string(BADGES.CHAIN_SHOTGUN_1));
+    ini_key_delete('badges',string(BADGES.STAR_STREAK_1));
+    ini_key_delete('badges',string(BADGES.FINISH));
+    ini_close(); 
+
+    scr_badge_add(BADGES.FINISH);
     scr_badge_add(BADGES.CHAIN_LIGHTNING_1);
     scr_badge_add(BADGES.CHAIN_LASER_1);
     scr_badge_add(BADGES.CHAIN_SHOTGUN_1);
     scr_badge_add(BADGES.STAR_STREAK_1);
-    scr_badge_add(BADGES.FINISH);
 }
 
 //TEST CHAIN
@@ -371,11 +379,14 @@ if(btn_post_exists)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///POST SCORE TO FACEBOOK
+            <string>///SHARE ON FACEBOOK
 scr_play_snd(Sound.Click);
-var total_stars = star1_val + star2_val + star1_val; 
+FBShare("https://atomsmashem.com/index.html");
+//var total_stars = star1_val + star2_val + star1_val; 
 //AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
-scr_fb_post_scrore(total, global.lvl_name, Reactor_Key, total_stars);
+//scr_fb_post_scrore(total, global.lvl_name, Reactor_Key, total_stars);
+
+//FBShareScreen();
 </string>
           </argument>
         </arguments>

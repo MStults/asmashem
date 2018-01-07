@@ -26,8 +26,7 @@
   &lt;string&gt;fbshareextension&lt;/string&gt;
 &lt;/array&gt;</iosplistinject>
   <androidactivityinject></androidactivityinject>
-  <gradleinject>compile 'com.android.support:support-v4:${YYAndroidSupportLibVersion}'
- compile 'com.facebook.android:facebook-android-sdk:4.+'</gradleinject>
+  <gradleinject></gradleinject>
   <iosSystemFrameworks/>
   <iosThirdPartyFrameworks>
     <Framework weak="0">FBSDKCoreKit.framework</Framework>

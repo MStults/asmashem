@@ -20,7 +20,8 @@
   <androidmanifestinject></androidmanifestinject>
   <iosplistinject></iosplistinject>
   <androidactivityinject></androidactivityinject>
-  <gradleinject>compile 'com.google.android.gms:play-services-ads:9.8.0'</gradleinject>
+  <gradleinject>compile 'com.google.android.gms:play-services-ads:9.8.0'
+compile 'com.facebook.android:facebook-android-sdk:[4,5)'</gradleinject>
   <iosSystemFrameworks>
     <Framework weak="0">AdSupport.framework</Framework>
     <Framework weak="0">CoreBluetooth.framework</Framework>
@@ -53,6 +54,7 @@
   <androidPermissions>
     <Permission>android.permission.INTERNET</Permission>
     <Permission>android.permission.ACCESS_NETWORK_STATE</Permission>
+    <Permission>android.permission.ACCESS_COARSE_LOCATION</Permission>
   </androidPermissions>
   <IncludedResources/>
   <files>
@@ -168,6 +170,17 @@
           <returnType>2</returnType>
           <argCount>0</argCount>
           <args/>
+        </function>
+        <function>
+          <name>FBShare</name>
+          <externalName>FBShare</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>1</arg>
+          </args>
         </function>
       </functions>
       <constants/>

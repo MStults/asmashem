@@ -17,7 +17,7 @@ switch(badge)
          url += "shot1.html";
         break;  
     case BADGES.CERTIFIED: 
-         url += "shot2.html";
+         url += "certified.html";
         break;
         
     case BADGES.STAR_STREAK_1: 
@@ -59,6 +59,14 @@ switch(badge)
     case BADGES.IRON: 
          url += "iron.html";
         break;
+        
+    case BADGES.SHOT1: 
+        url += "shot1.html";
+        break;
+        
+    case BADGES.SHOT2: 
+        url += "shot2.html";
+        break;
                 
     case BADGES.ATOM1: 
          url += "one.html";
@@ -90,7 +98,8 @@ switch(badge)
         
 }
 
-var map = ds_map_create();
-ds_map_add(map, "link",  url);
-facebook_dialog("feed", map, -1);
-ds_map_destroy(map);
+FBShare(url);
+//var map = ds_map_create();
+//ds_map_add(map, "link",  url);
+//facebook_dialog("feed", map, -1);
+//ds_map_destroy(map);

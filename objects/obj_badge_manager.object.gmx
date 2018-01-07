@@ -33,7 +33,7 @@ screens = 0;
 var xx = 0;
 for(var i=0; i&lt;len; i++)
 {
-    badges[i] = 
+
     xx = i * room_width;
     screens[i] = instance_create(xx, 0, obj_badge_screen);
     with(screens[i])
