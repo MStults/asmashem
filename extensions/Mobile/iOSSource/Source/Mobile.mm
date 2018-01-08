@@ -135,5 +135,8 @@ BOOL m_use_test = false;
     NSString* nsurl  = [NSString stringWithCString:url encoding:NSUTF8StringEncoding];
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL URLWithString:nsurl];
+    [FBSDKShareDialog showFromViewController:g_controller
+                                 withContent:content
+                                    delegate:nil];
 }
 @end
