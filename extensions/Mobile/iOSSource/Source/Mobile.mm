@@ -11,7 +11,8 @@ extern int g_DeviceHeight;
 
 BOOL mInterstitialReady = false;
 
-NSString* MY_AD_UNIT = @"ca-app-pub-8744843829641364/7383507531";
+//NSString* MY_AD_UNIT = @"ca-app-pub-8744843829641364/7383507531";
+NSString* MY_AD_UNIT = @"ca-app-pub-8744843829641364/1197373138";
 NSString* TEST_AD_UNIT = @"ca-app-pub-3940256099942544/1033173712";
 
 NSString* m_AdUnit = MY_AD_UNIT;
