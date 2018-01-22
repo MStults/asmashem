@@ -182,6 +182,28 @@ compile 'com.facebook.android:facebook-android-sdk:[4,5)'</gradleinject>
             <arg>1</arg>
           </args>
         </function>
+        <function>
+          <name>FBShareVictory</name>
+          <externalName>FBShareVictory</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>3</argCount>
+          <args>
+            <arg>1</arg>
+            <arg>1</arg>
+            <arg>1</arg>
+          </args>
+        </function>
+        <function>
+          <name>FBShareScreen</name>
+          <externalName>FBShareScreen</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>0</argCount>
+          <args/>
+        </function>
       </functions>
       <constants/>
     </file>

@@ -381,10 +381,11 @@ if(btn_post_exists)
             <kind>1</kind>
             <string>///SHARE ON FACEBOOK
 scr_play_snd(Sound.Click);
-FBShare("https://atomsmashem.com/index.html");
-//var total_stars = star1_val + star2_val + star1_val; 
+//FBShare("https://atomsmashem.com/index.html");
+
+var total_stars = star1_val + star2_val + star1_val; 
 //AtomFBPostScore(Reactor_Key, global.lvl_name, total, total_stars);
-//scr_fb_post_scrore(total, global.lvl_name, Reactor_Key, total_stars);
+scr_fb_post_scrore(total, global.lvl_name, Reactor_Key, total_stars);
 
 //FBShareScreen();
 </string>

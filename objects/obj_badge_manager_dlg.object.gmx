@@ -250,7 +250,7 @@ if current_index &lt;= 0
 
 //if scr_check_UI_is_moving(screens, len) then exit;
 
-scr_play_snd(Sound.Click);
+
 current_index--;
 
 for(var i=0; i&lt;len; i++)
@@ -321,7 +321,7 @@ if current_index &gt;= (len - 1)
 
 //if scr_check_UI_is_moving(screens, len) then exit;
 
-scr_play_snd(Sound.Click);
+
 current_index++;
     
 for(var i=0; i&lt;len; i++)
@@ -376,7 +376,13 @@ if current_index &gt; 0
 {
     back_index = 0;
     back_test = scr_btn_click(back_x, back_y, back_x + btn_w, back_y + btn_h);
-    if back_test &lt; 3 then back_index = back_test else alarm[2] = 1;    
+    if back_test &lt; 3 
+    then back_index = back_test 
+    else 
+    {
+        scr_play_snd(Sound.Click);
+        alarm[2] = 1;    
+    }
 } else {  
     back_index = 3;
 }
@@ -386,7 +392,13 @@ if current_index &lt; (len - 1)
 {
     next_index = 0;
     next_test = scr_btn_click(next_x, next_y, next_x + btn_w, next_y + btn_h);
-    if next_test &lt; 3 then next_index = next_test else alarm[0] = 1;    
+    if next_test &lt; 3 
+    then next_index = next_test 
+    else
+    {
+        scr_play_snd(Sound.Click);
+        alarm[0] = 1;    
+    }
 } else {   
     next_index = 3;
 }

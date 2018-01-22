@@ -1,4 +1,4 @@
-/****
+
 if not scr_can_share() then exit;
 
 var the_score = argument0;
@@ -19,6 +19,13 @@ if(r_key == "GVR")
 
 
 var descr = "Reactor " + string(reactor) + ", Level " + string(the_level) + ", Score " + string(the_score) + ", Stars earned " + string(star_cnt) + " of 3.";
+
+var title = string(the_score) + " on level " +  string(the_level) + "-" + reactor;
+
+//public  void FBShareVictory(String title, String descr, String imageUrl)
+FBShareVictory(title, descr, "https://atomsmashem.com/resources/img/fbshare-min.jpg");
+
+/**
 var map = ds_map_create();
 ds_map_add(map, "name", "Atom Smashem");
 ds_map_add(map, "caption", "BY SUPER NOMI" );
@@ -28,4 +35,4 @@ ds_map_add(map, "picture", "https://atomsmashem.com/resources/img/fbIcon-min.jpg
 
 facebook_dialog("feed", map, -1);
 ds_map_destroy(map);
-***/
+**/

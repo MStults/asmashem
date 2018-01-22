@@ -90,7 +90,7 @@ global.challenge_bonus = 500;</code>
     <instance objName="obj_score" x="130" y="9" name="inst_710C3602" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_next" x="11" y="698" name="inst_214A3C99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_next_level" x="128" y="160" name="inst_8FF046F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_3" x="192" y="416" name="inst_1F8D8F82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_3" x="192" y="352" name="inst_1F8D8F82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_3" x="192" y="224" name="inst_726CF9BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_text" x="32" y="256" name="inst_3FC87253" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_point_trigger" x="256" y="128" name="inst_FBC8065B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -101,23 +101,27 @@ global.challenge_bonus = 500;</code>
     <instance objName="obj_atom_3" x="128" y="224" name="inst_8657FE7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_3" x="384" y="224" name="inst_CBDE3D3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="64" y="192" name="inst_091E971C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_1" x="128" y="352" name="inst_DF317BC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_1" x="256" y="480" name="inst_DF317BC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_3" x="64" y="288" name="inst_A55156A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_2" x="192" y="288" name="inst_F227CBF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_settings" x="429" y="686" name="inst_F257D503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="384" y="192" name="inst_282AE534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_5" x="320" y="288" name="inst_2746816F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_5" x="256" y="352" name="inst_0FCAB270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_5" x="384" y="288" name="inst_2746816F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_5" x="320" y="352" name="inst_0FCAB270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_5" x="64" y="416" name="inst_AD2A8031" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_5" x="384" y="416" name="inst_FAA2C9CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_lightning" x="128" y="256" name="inst_076282D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_lightning" x="192" y="352" name="inst_92091AF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_lightning" x="320" y="352" name="inst_6F96C091" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_atom_lightning" x="384" y="288" name="inst_840235D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_lightning" x="320" y="288" name="inst_076282D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_lightning" x="128" y="480" name="inst_92091AF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_lightning" x="192" y="416" name="inst_6F96C091" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_lightning" x="256" y="352" name="inst_840235D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_laser" x="64" y="480" name="inst_6D0C713B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_laser" x="384" y="480" name="inst_9B0431C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_laser" x="256" y="416" name="inst_ABCAD0C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_atom_laser" x="64" y="224" name="inst_FDAACA1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_6" x="128" y="288" name="inst_A36CEA35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_6" x="192" y="480" name="inst_83358BB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_6" x="128" y="352" name="inst_459CE5C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atom_6" x="320" y="480" name="inst_284F6C54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="fg_lvl1_top_left" x="0" y="0" w="141" h="107" xo="0" yo="0" id="10000016" name="inst_0607134B" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
