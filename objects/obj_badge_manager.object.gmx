@@ -90,6 +90,10 @@ is_dialog = false;
           <argument>
             <kind>1</kind>
             <string>path_delete(path_next);
+
+
+instance_destroy(obj_badge_screen);
+    
 </string>
           </argument>
         </arguments>
@@ -146,7 +150,10 @@ scr_play_snd(Sound.Click);
 
 if current_index &gt;= len - 1
 {
-    room_goto(room_next(room));
+   // room_goto(room_next(room));
+   obj_level_summary.badges_visible = false;
+   visible = false;
+   instance_destroy();
 } 
 else 
 {
@@ -220,6 +227,7 @@ if can_share
           <argument>
             <kind>1</kind>
             <string>///DRAW BADGE SCREEN
+if not visible then exit;
 
 scr_draw_dialog_rec_ext(.7);
 

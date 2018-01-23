@@ -40,6 +40,9 @@
           <argument>
             <kind>1</kind>
             <string>///init UI
+
+badges_visible  = false;
+
 btn_w = sprite_get_width(spr_menu_w_lg);
 btn_h = sprite_get_height(spr_menu_w_lg);
 
@@ -330,6 +333,16 @@ scr_badge_record_and_test(BADGES.ATOM5, "ATOM5", global.anti_created, 50);
 scr_badge_record_and_test(BADGES.ATOM6, "ATOM6", global.mine_created, 50);
 
 badge_cnt = array_length_1d(global.badges_earned);
+
+if(badge_cnt &gt; 0) 
+{
+    badges_visible = true;
+    instance_create(0, 0, obj_badge_manager);
+}
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -441,7 +454,8 @@ alarm[3] = room_speed / 14;
 scr_play_snd(Sound.Click);
 score = 0;
 global._loaded = false;
-
+room_goto(room_next(room));
+/***
 if badge_cnt &gt; 0
 {
     instance_create(0, 0, obj_badge_manager);
@@ -451,7 +465,7 @@ else
 {
     room_goto(room_next(room));
 }
-
+***/
 
 
 
@@ -538,7 +552,9 @@ room_goto(rm_reactor_menu);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>step_count = (step_count + 1) mod room_speed; 
+            <string>if(badges_visible) exit;
+
+step_count = (step_count + 1) mod room_speed; 
 
 if energy_step &gt;= score 
 then energy_step = score;
@@ -664,7 +680,10 @@ if can_brag and not btn_post_exists
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///DRAW SUMMARY
+            <string>
+if(badges_visible) exit;
+
+///DRAW SUMMARY
 
 scr_draw_dialog_rec();
 
